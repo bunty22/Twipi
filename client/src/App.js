@@ -1,10 +1,14 @@
+import React from 'react';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import MainContainer from './components/MainContainer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       hello
-      </header>
+      <Navbar/>
+      <MainContainer/>
+      <Footer/>
     </div>
   );
 }
