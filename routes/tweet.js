@@ -5,8 +5,7 @@ const https = require("https");
 const router = express.Router();
 
 router.post("/tweets", (req, res) => {
-	// const { tweetId } = req.body;
-	const tweetId = '1364276143088525314';
+	const { tweetId } = req.body;
 
 	//parameters
     const expansions = 'author_id,attachments.poll_ids,referenced_tweets.id,attachments.media_keys';
