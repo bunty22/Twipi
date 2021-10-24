@@ -16,7 +16,7 @@ function TweetImage({tweets = []}) {
         html2canvas(tweetImage,
             { useCORS: true }
         ).then(function(canvas){
-            const d = document.createElement("d");
+            const d = document.createElement("a");
             d.href = canvas.toDataURL("image/png");
             d.download = "Twipi-mage.png";
             d.click();
@@ -97,7 +97,7 @@ function TweetImage({tweets = []}) {
                     </div>
                 ))}
             </div>
-            <button  className="btn btn-primary btn-md my-4" onclick={downloadImg()} >
+            <button  className="btn btn-primary btn-md my-4" onClick={() => downloadImg()} >
                 DOWNLOAD
             </button>
         </div>
