@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import verifiedBadge from '../assets/verified.svg';
 import { bgImageContext } from '../context/imageConfig-context';
 import { themeContext } from '../context/theme-context';
@@ -6,7 +6,11 @@ import html2canvas from 'html2canvas';
 
 function TweetImage({tweets = []}) {
     const { themes } = useContext(themeContext);
-    const [imgConfig] = useContext(bgImageContext);
+    const [imgConfig, setBgImage] = useContext(bgImageContext);
+
+    useEffect(() => {
+        setBgImage({ link: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixid=MnwyMTkwNTR8MHwxfHNlYXJjaHw5fHxuYXR1cmV8ZW58MHx8fHwxNjM0NDU2Njkz&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80' })
+    }, [])
 
     let theme = themes.isLightTheme ? themes.light : themes.dark;
 
