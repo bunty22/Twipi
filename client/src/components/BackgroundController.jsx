@@ -12,8 +12,6 @@ function BackgroundController() {
 	const [query, setQuery] = useState([]);
 	const [results, setResults] = useState([]);
 
-	const clientId = process.env.REACT_APP_CLIENT_ID;
-
 	const handleSearchQuery = (e) => {
 		setQuery(e.target.value);
 	}
@@ -25,7 +23,7 @@ function BackgroundController() {
 			"https://api.unsplash.com/search/photos?page=1&query=" +
 			query +
 			"&client_id=" +
-			clientId;
+			process.env.REACT_APP_CLIENT_ID;
 
 		fetch(url)
 			.then((res) => res.json())
