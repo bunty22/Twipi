@@ -6,7 +6,7 @@ import ThemeProvider from '../context/theme-context';
 
 function MainContainer() {
     return (
-        <div className="grid-layout container-fluid">
+        <div className="grid-layout container-center">
             <ThemeProvider>
                 <BgImageContextProvider>
                     <TweetContainer/>

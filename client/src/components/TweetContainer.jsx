@@ -29,7 +29,7 @@ function TweetContainer() {
 
     return (
         <div className="tweet-container">
-            <form  onSubmit={handleSubmit} className="my-5">
+            <form  onSubmit={handleSubmit} className="my-4 form--tweet">
 				<div className="input-group tweet-link-input">
 					<input
 						type="text"
@@ -37,7 +37,7 @@ function TweetContainer() {
 						required
 						value={url}
 						className="form-control"
-						placeholder="Paste a link of your tweet here"
+						placeholder="Paste tweet link"
 						onChange={(e) => setUrl(e.target.value)}
 					/>
 					<button className="btn btn-outline-primary ml-2" type="submit">

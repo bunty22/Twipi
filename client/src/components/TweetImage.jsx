@@ -49,54 +49,56 @@ function TweetImage({tweets = []}) {
     
     return (
         <div className="tweet-image-group">
-            <div 
-                className="tweet-image" 
-                id="download-image"
-                style={{
-                    background: `${changeBackgroundImage()} no-repeat center/cover`
-                }}
-            >
-                {tweets.map((tweet) => (
-                    <div 
-                        className="tweet-content"
-                        key={tweet.data.id}
-                        style={{
-                            color: theme.text,
-                            borderRadius: `${imgConfig.borderRadius}px`,
-                            backgroundColor: changeTheme()
-                        }}
-                    >
-                        <div className="profile-group">
-                            <img src={tweet.includes.users[0].profile_image_url} 
-                                 alt="profile-img" 
-                                 className="profile-img"
-                            />
-                            <div className="user-details">
-                                <p className="name mb-0">
-                                {tweet.includes.users[0].name}
-                                    <span className="verified-badge">
-                                        {tweet.includes.users[0].verified ? (
-                                            <img 
-                                                    src={verifiedBadge}
-                                                    alt="verified-badge"
-                                                    className="verified-badge"
-                                            />
-                                        ): (
-                                            ""
-                                        )}
-                                    </span>
-                                </p>
-                                
-                                <p className="username mt-1 mb-0">@{tweet.includes.users[0].username}</p>
+            <div className="tweet-image--container">
+                <div 
+                    className="tweet-image" 
+                    id="download-image"
+                    style={{
+                        background: `${changeBackgroundImage()} no-repeat center/cover`
+                    }}
+                >
+                    {tweets.map((tweet) => (
+                        <div 
+                            className="tweet-content"
+                            key={tweet.data.id}
+                            style={{
+                                color: theme.text,
+                                borderRadius: `${imgConfig.borderRadius}px`,
+                                backgroundColor: changeTheme()
+                            }}
+                        >
+                            <div className="profile-group">
+                                <img src={tweet.includes.users[0].profile_image_url} 
+                                    alt="profile-img" 
+                                    className="profile-img"
+                                />
+                                <div className="user-details">
+                                    <p className="name mb-0">
+                                    {tweet.includes.users[0].name}
+                                        <span className="verified-badge">
+                                            {tweet.includes.users[0].verified ? (
+                                                <img 
+                                                        src={verifiedBadge}
+                                                        alt="verified-badge"
+                                                        className="verified-badge"
+                                                />
+                                            ): (
+                                                ""
+                                            )}
+                                        </span>
+                                    </p>
+                                    
+                                    <p className="username mt-1 mb-0">@{tweet.includes.users[0].username}</p>
+                                </div>
                             </div>
+                            <p className="tweet-text mb-0">
+                                {tweet.data.text}
+                            </p>
                         </div>
-                        <p className="tweet-text mb-0">
-                            {tweet.data.text}
-                        </p>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-            <button  className="btn btn-primary btn-md my-4" onClick={() => downloadImg()} >
+            <button  className="btn btn-primary btn-md my-2" onClick={() => downloadImg()} >
                 DOWNLOAD
             </button>
         </div>

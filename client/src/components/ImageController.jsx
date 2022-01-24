@@ -21,21 +21,13 @@ function ImageController() {
 	}
 
     return (
-        <div className="config-section my-4 border border-1 rounded-lg p-4">
-			
-			<div className="text-secondary text-center mt-2">
-				<h2>Twipi</h2>
-				<p className="mt-3">
-					Create beautiful posts from your tweets.
-				</p>
-			</div>
-
-			<div className="border rounded mt-4 shadow-sm">
+        <div className="config-section my-2 border border-1 rounded-lg p-3">
+			<div className="border rounded mt-2 shadow-sm">
 				<p className="p-2 mb-0">Tweet Background</p>
 				<hr className="m-0" />
 				<div className="p-3">
 					<button
-						className="btn btn-sm btn-primary"
+						className="btn btn-sm btn-primary btn-toggle mx-auto"
 						onClick={toggleTheme}
 					>
 						Toggle theme

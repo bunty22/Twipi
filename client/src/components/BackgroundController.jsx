@@ -48,18 +48,18 @@ function BackgroundController() {
     return (
         <div>
 			<Tabs className="tabs">
-				<TabList className="tablist d-flex justify-content-between p-3 mb-0">
-					<Tab className="tab">Upload files</Tab>
-					<Tab className="tab">URL</Tab>
-					<Tab className="tab">Color</Tab>
-					<Tab className="tab">Search</Tab>
+				<TabList className="tablist justify-content-between p-3 mb-0">
+					<Tab className="tab p-1">Upload files</Tab>
+					<Tab className="tab p-1">URL</Tab>
+					<Tab className="tab p-1">Color</Tab>
+					<Tab className="tab p-1">Search</Tab>
 				</TabList>
 				<hr className="m-0" />
-				<TabPanel className="tabpanel">
+				<TabPanel className="tabpanel my-3">
 					<input
 						type="file"
 						accept="image/*"
-						className="form-control-sm m-3"
+						className="form-control-sm input-file"
 						onChange={getFile}
 					/>
 				</TabPanel>
