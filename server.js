@@ -1,23 +1,26 @@
-import express from 'express';
-import cors from 'cors';
-import * as path from 'path';
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const routes = require('./routes/tweet');
+const path = require('path');
 
 dotenv.config();
-const __dirname = path.resolve();
 const app = express();
 
-app.use(express.json());
+app.use(bodyParser.json());
 app.use(cors());
 
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('client/build'));
+app.use("/api", routes);
 
-    app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-    });
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static("client/build"));
+
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+	});
 }
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => console.log(`server is running on PORT: ${PORT}`))
+app.listen(PORT, () => console.log(`server is running on PORT: ${PORT}`));
