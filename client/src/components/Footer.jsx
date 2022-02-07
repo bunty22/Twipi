@@ -1,8 +1,4 @@
 import React from 'react';
-// import instaImg from '../../public/icons/instagram.svg'
-// import githImg from '../../public/icons/github.svg';
-// import linkedImg from '../../public/icons/linkedin.svg';
-// import twitterImg from '../../public/icons/twitter.svg';
 
 function Footer() {
     return (
