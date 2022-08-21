@@ -98,7 +98,7 @@ function TweetImage({tweets = []}) {
                     ))}
                 </div>
             </div>
-            <button  className="btn btn-primary btn-md my-2" onClick={() => downloadImg()} >
+            <button  className="btn btn-primary btn-md my-2 btn-bg border-dark" onClick={() => downloadImg()} >
                 DOWNLOAD
             </button>
         </div>

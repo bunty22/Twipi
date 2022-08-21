@@ -67,13 +67,13 @@ function BackgroundController() {
 					<div className="input-group my-3 d-flex flex-cloumn">
 						<input
 							type="text"
-							className="form-control w-75"
+							className="form-control w-75 border-dark"
 							placeholder="Image URL"
 							value={bgUrl}
 							onChange={(e) => setBgUrl(e.target.value)}
 						/>
 						<button
-							className="btn btn-primary w-100 mt-3 mx-auto"
+							className="btn btn-primary w-100 mt-3 mx-auto btn-bg"
 							onClick={() => setBgImage({ link: bgUrl })}
 						>
 							Submit
@@ -100,14 +100,14 @@ function BackgroundController() {
 				<TabPanel className="tabpanel ">
 					<form className="d-flex m-3">
 						<input
-							className="form-control"
+							className="form-control border-dark"
 							type="search"
 							placeholder="i.e. Dog"
 							aria-label="Search"
 							onChange={handleSearchQuery}
 						/>
 						<button
-							className="btn btn-outline-primary ml-2"
+							className="btn btn-outline-primary ml-2 border-dark secondary-text-color"
 							type="submit"
 							onClick={handleSearch}
 						>
