@@ -40,7 +40,7 @@ function TweetContainer() {
 						placeholder="Paste tweet link"
 						onChange={(e) => setUrl(e.target.value)}
 					/>
-					<button className="btn btn-outline-primary ml-2 border-dark secondary-text-color " type="submit">
+					<button className="btn btn-outline-primary btn-bg ml-2 border-dark secondary-text-color " type="submit">
 						Create
 					</button>
 				</div>
