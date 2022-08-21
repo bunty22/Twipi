@@ -73,7 +73,7 @@ function BackgroundController() {
 							onChange={(e) => setBgUrl(e.target.value)}
 						/>
 						<button
-							className="btn btn-primary w-100 mt-3 mx-auto btn-bg"
+							className="btn btn-primary btn-bg w-100 mt-3 mx-auto btn-bg"
 							onClick={() => setBgImage({ link: bgUrl })}
 						>
 							Submit
@@ -107,7 +107,7 @@ function BackgroundController() {
 							onChange={handleSearchQuery}
 						/>
 						<button
-							className="btn btn-outline-primary ml-2 border-dark secondary-text-color"
+							className="btn btn-outline-primary btn-bg ml-2 border-dark secondary-text-color"
 							type="submit"
 							onClick={handleSearch}
 						>
